@@ -3,7 +3,7 @@ name: "notion-calendar"
 description: "Use whenever any event Leeor attends or due date someone sets for him appears in any source (a transcript, recording, text, email, or conversation, in any project), or when he asks to add, move, or cancel one. Adds or corrects it in his Notion Events calendar the way he fills it in himself."
 metadata:
   author: "Leeor Nahum"
-  version: "1.0.0"
+  version: "1.1.0"
 ---
 
 # Leeor's Notion Events Calendar
@@ -18,7 +18,11 @@ Examples below show shape only. Write the title and values that are accurate for
 
 ## Before Adding
 
-Search the whole database for the same title on the same date, archived and past rows included, since the calendar view can hide them. Use the database's own search or a query over all rows rather than scrolling the view. If it is there, fix its date or time instead of adding a second row. If the title is there on a nearby date and the source describes the same occurrence, that row has a wrong date, so fix it. The same title can legitimately repeat on other dates, so a different date alone is not a duplicate.
+Look at every row from the day before to the day after the event's date, archived and past rows included, since the calendar view can hide them, and the earlier date too when the source says the event was moved. Filter the database by date rather than searching for a title or scrolling the view. The same occurrence often sits under another name, such as an `(if <condition>)` row or one added before its time was known, so match by what the event is (its organizer, purpose, people, and session or booking), not by title. A prep session and the event it prepares for, or a deadline and a meeting about it, are separate events. If you cannot tell whether two rows are one event, add nothing and ask him.
+
+If the event is there, update that row with the accurate title, date, time, and link instead of adding a second row. A row for the same occurrence on a nearby date has a wrong date, so fix it. Drop a row's `(if <condition>)` once the source shows the condition was met. The same event can legitimately repeat on other dates, so a different date alone is not a duplicate.
+
+If two rows already cover one occurrence, carry every accurate detail into one of them, read it back, then move the other to Notion's trash. Name the trashed row in the reply.
 
 ## Fields
 
